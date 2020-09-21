@@ -1,4 +1,6 @@
-// NOT WORKING YET
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
 
         let playerSelection = () => {
             let rockPaperScissors = prompt(`Rock, Paper, Scissors? `)
