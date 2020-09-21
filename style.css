@@ -13,13 +13,21 @@ main {
 
 .box1 {
     grid-area: box1;
-    
+    display: flex;
+    justify-content: center;
+    padding: 75px 75px;
 }
 
 .box2 {
     grid-area: box2;
+    display: flex;
+    justify-content: center;
+    padding: 75px 75px;
 }
 
 .box3 {
     grid-area: box3;
+    display: flex;
+    justify-content: center;
+    padding: 75px 75px;
 }
