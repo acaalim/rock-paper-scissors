@@ -1,3 +1,5 @@
+// NOT WORKING YET
+
         let playerSelection = () => {
             let rockPaperScissors = prompt(`Rock, Paper, Scissors? `)
 
@@ -16,11 +18,11 @@
             let rockPaperScissors = Math.floor((Math.random() * 100) + 1);
 
             if (rockPaperScissors < 33) {
-                return ('Rock');
+                return ('rock');
             } else if (rockPaperScissors >= 33 && rockPaperScissors < 66) {
-                return ('Paper');
+                return ('paper');
             } else {
-                return ('Scissors');
+                return ('scissors');
             }
         }
 
@@ -30,8 +32,20 @@
 
             if (playerChoice == computerChoice) {
                 return (`It's a tie`);
+            } else if (playerChoice == 'Rock' && computerChoice == 'paper') {
+                return ('Paper beats Rock, you lose');
+            } else if (playerChoice == 'rock' && computerChoice == 'scissors') {
+                return ('Rock beats Scissors, you win');
+            } else if (playerChoice == 'paper' && computerChoice == 'rock') {
+                return ('Paper beats Rock, you win');
+            } else if (playerChoice == 'paper' && computerChoice == 'scissors') {
+                return ('Scissors beats Paper, you lose');
+            } else if (playerChoice == 'scissors' && computerChoice == 'rock') {
+                return ('Rock beats Scissors, you lose');
+            } else if (playerChoice == 'scissors' && computerChoice == 'paper') {
+                return ('Scissors beats Paper, you win');
             } else {
-                console.log('I like');
+                return ('Illegal character(s), Rock, Paper, Scissors');
             }
         }
 
