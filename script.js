@@ -4,11 +4,11 @@
             let rockPaperScissors = prompt(`Rock, Paper, Scissors? `)
 
             if (rockPaperScissors == 'Rock' || rockPaperScissors == 'rock') {
-                return ('Rock');
+                return ('rock');
             } else if (rockPaperScissors == 'Paper' || rockPaperScissors == 'paper') {
-                return ('Paper');
+                return ('paper');
             } else if (rockPaperScissors == 'Scissors' || rockPaperScissors == 'scissors') {
-                return ('Scissors');
+                return ('scissors');
             } else {
                 return ('Choose Rock, Paper, or Scissor');
             }
@@ -32,17 +32,17 @@
 
             if (playerChoice == computerChoice) {
                 return (`It's a tie`);
-            } else if (playerChoice == 'Rock' && computerChoice == 'paper') {
+            } else if (playerChoice === 'rock' && computerChoice === 'paper') {
                 return ('Paper beats Rock, you lose');
-            } else if (playerChoice == 'rock' && computerChoice == 'scissors') {
+            } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
                 return ('Rock beats Scissors, you win');
-            } else if (playerChoice == 'paper' && computerChoice == 'rock') {
+            } else if (playerChoice === 'paper' && computerChoice === 'rock') {
                 return ('Paper beats Rock, you win');
-            } else if (playerChoice == 'paper' && computerChoice == 'scissors') {
+            } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
                 return ('Scissors beats Paper, you lose');
-            } else if (playerChoice == 'scissors' && computerChoice == 'rock') {
+            } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
                 return ('Rock beats Scissors, you lose');
-            } else if (playerChoice == 'scissors' && computerChoice == 'paper') {
+            } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
                 return ('Scissors beats Paper, you win');
             } else {
                 return ('Illegal character(s), Rock, Paper, Scissors');
