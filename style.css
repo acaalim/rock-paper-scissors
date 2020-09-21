@@ -3,5 +3,23 @@ h1 {
 }
 
 main {
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "box1 box2 box3";
+}
+
+.box1 {
+    grid-area: box1;
     
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box3 {
+    grid-area: box3;
 }
