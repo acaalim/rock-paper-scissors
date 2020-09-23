@@ -2,46 +2,19 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
-rock.addEventListener('onclick', choseRock);
+        let playerSelection = () => {
+            let rockPaperScissors = prompt(`Rock, Paper, Scissors? `)
 
-function choseRock() {
-    if (rockPaperScissorsPrompt().toLowerCase() == 'rock')
-        console.log('True');
-    else {
-        console.log('False');
-    }
-}
-
-let rockPaperScissorsPrompt = () => {
-    let rockPaperScissors = prompt(`Rock, Paper, Scissors: `);
-    if (rockPaperScissors == 'Rock' || rockPaperScissors == 'rock') {
-        return ('rock');
-    } else if (rockPaperScissors == 'Paper' || rockPaperScissors == 'paper') {
-        return ('paper');
-    } else if (rockPaperScissors == 'Scissors' || rockPaperScissors == 'scissors') {
-        return ('scissors');
-    } else {
-        return ('Choose Rock, Paper, or Scissor');
-    }
-}
-
-/* ABOVE I'M ATTEMPTING TO CREATE A rockPaperScissors function
-TRYING TO ADD EVENT LISTENERS TO BUTTONS WITH ABOVE CODE
-CODE BELOW IS GOOD ENOUGH TO WORK DO NOT CHANGE UNTIL CONFIRMING THAT ABOVE CODE WORKS
-*/
-        // let playerSelection = () => {
-        //     let rockPaperScissors = prompt(`Rock, Paper, Scissors? `)
-
-            // if (rockPaperScissors == 'Rock' || rockPaperScissors == 'rock') {
-            //     return ('rock');
-            // } else if (rockPaperScissors == 'Paper' || rockPaperScissors == 'paper') {
-            //     return ('paper');
-            // } else if (rockPaperScissors == 'Scissors' || rockPaperScissors == 'scissors') {
-            //     return ('scissors');
-            // } else {
-            //     return ('Choose Rock, Paper, or Scissor');
-            // }
-        // }
+            if (rockPaperScissors == 'Rock' || rockPaperScissors == 'rock') {
+                return ('rock');
+            } else if (rockPaperScissors == 'Paper' || rockPaperScissors == 'paper') {
+                return ('paper');
+            } else if (rockPaperScissors == 'Scissors' || rockPaperScissors == 'scissors') {
+                return ('scissors');
+            } else {
+                return ('Choose Rock, Paper, or Scissor');
+            }
+        }
 
         let computerPlay = () => {
             let rockPaperScissors = Math.floor((Math.random() * 100) + 1);
