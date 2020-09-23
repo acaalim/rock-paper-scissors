@@ -2,14 +2,10 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
-rock.addEventListener('onclick', choseRock);
+rock.addEventListener('click', choseRock);
 
 function choseRock() {
-    if (rockPaperScissorsPrompt().toLowerCase() == 'rock')
-        console.log('True');
-    else {
-        console.log('False');
-    }
+        alert('rock');
 }
 
 let rockPaperScissorsPrompt = () => {
