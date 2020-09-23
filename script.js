@@ -2,6 +2,9 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
+rock.addEventListener('onclick', choseRock);
+
+
         let playerSelection = () => {
             let rockPaperScissors = prompt(`Rock, Paper, Scissors? `)
 

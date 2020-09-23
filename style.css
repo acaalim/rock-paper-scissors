@@ -16,6 +16,7 @@ main {
     display: flex;
     justify-content: center;
     padding: 75px 75px;
+    border-radius: 0%;
 }
 
 .box2 {
