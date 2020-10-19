@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors Game
 An assignment from theodinproject.com <br />
-I will be improving this project until I am satisfied with it.
+Project Status: Unfinished
 
 
 # Subheader
