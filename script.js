@@ -3,9 +3,19 @@ const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
 rock.addEventListener('click', choseRock);
+paper.addEventListener('click', chosePaper);
+scissors.addEventListener('click', choseScissors);
 
 function choseRock() {
         alert('rock');
+}
+
+function chosePaper() {
+    alert('paper');
+}
+
+function choseScissors() {
+    alert('scissors');
 }
 
 let rockPaperScissorsPrompt = () => {
@@ -50,6 +60,7 @@ CODE BELOW IS GOOD ENOUGH TO WORK DO NOT CHANGE UNTIL CONFIRMING THAT ABOVE CODE
                 return ('scissors');
             }
         }
+        
 
         let round = () => {
             let playerChoice = playerSelection();
@@ -58,19 +69,20 @@ CODE BELOW IS GOOD ENOUGH TO WORK DO NOT CHANGE UNTIL CONFIRMING THAT ABOVE CODE
             if (playerChoice == computerChoice) {
                 return (`It's a tie`);
             } else if (playerChoice === 'rock' && computerChoice === 'paper') {
-                return ('Paper beats Rock, you lose');
+                alert('Paper beats Rock, you lose');
             } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
-                return ('Rock beats Scissors, you win');
+                alert('Rock beats Scissors, you win');
             } else if (playerChoice === 'paper' && computerChoice === 'rock') {
-                return ('Paper beats Rock, you win');
+                alert('Paper beats Rock, you win');
             } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
-                return ('Scissors beats Paper, you lose');
+                alert('Scissors beats Paper, you lose');
             } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
-                return ('Rock beats Scissors, you lose');
+                alert('Rock beats Scissors, you lose');
             } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
-                return ('Scissors beats Paper, you win');
+                alert('Scissors beats Paper, you win');
             } else {
-                return ('Illegal character(s), Rock, Paper, Scissors');
+                alert ('Illegal character(s), Rock, Paper, Scissors');
             }
         }
 
+round();
