@@ -52,3 +52,25 @@ let computerResponse = () => {
         return ('scissors');
     }
 }
+
+let compareResponses = () => {
+    let user = userResponse();
+    let computer = computerResponse();
+    if (computer == user) {
+        alert(`It's a draw`);
+    } else if (computer == 'rock' && user == 'paper') {
+        alert('Paper beats Rock, You Win');
+    } else if (computer == 'paper' && user == 'scissors') {
+        alert('Scissors beats Paper, You Win');
+    } else if (computer == 'scissors' && user == 'rock') {
+        alert('Rock beats Scissors, You Win');
+    } else if (computer == 'rock' && user == 'scissors') {
+        alert('Rock beats Scissors, You Lose');
+    } else if (computer == 'paper' && user == 'rock') {
+        alert('Paper beats Rock, You Lose');
+    } else if (computer == 'scissors' && user == 'paper') {
+        alert('Scissors beats Paper, You Lose');
+    } else {
+        alert('Illegal Character(s)');
+    }
+}
