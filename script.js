@@ -1,88 +1,31 @@
-const rock = document.getElementById('rock');
-const paper = document.getElementById('paper');
-const scissors = document.getElementById('scissors');
+/*
+Understand the Problem
+We're creating a rock, paper, scissors game that's playable in the console. The user inputs rock, paper, or scissors and the computer randomly generates rock, paper, or scissors. Then the algorithm will compare the user response and the computer response and output who won.
 
-rock.addEventListener('click', choseRock);
-paper.addEventListener('click', chosePaper);
-scissors.addEventListener('click', choseScissors);
+Plan
+Does your program have a user interface? 
+No, it will be playable from the console.
 
-function choseRock() {
-        alert('rock');
-}
+What inputs will your program have? 
+The user will input rock, paper, scissors, any other response results in an error.
 
-function chosePaper() {
-    alert('paper');
-}
+What's the desired output?
+After the user inputs rock, paper, or scissors, the computer will randomly generate a counter-response and then the responses will be compared and will output if the user won, lost, or drew the game.
 
-function choseScissors() {
-    alert('scissors');
-}
+Given your inputs, what are the necessary steps to return the desired output?
+When a user chooses rock, paper, or scissors
+The algorithm will compare the user input with the computers input
+if the user's input is the same as the computer's input, output "it's a draw"
+if the user's input is different
+then if the user win's output "you won"
+else output "you lost"
 
-let rockPaperScissorsPrompt = () => {
-    let rockPaperScissors = prompt(`Rock, Paper, Scissors: `);
-    if (rockPaperScissors == 'Rock' || rockPaperScissors == 'rock') {
-        return ('rock');
-    } else if (rockPaperScissors == 'Paper' || rockPaperScissors == 'paper') {
-        return ('paper');
-    } else if (rockPaperScissors == 'Scissors' || rockPaperScissors == 'scissors') {
-        return ('scissors');
-    } else {
-        return ('Choose Rock, Paper, or Scissor');
-    }
-}
-
-/* ABOVE I'M ATTEMPTING TO CREATE A rockPaperScissors function
-TRYING TO ADD EVENT LISTENERS TO BUTTONS WITH ABOVE CODE
-CODE BELOW IS GOOD ENOUGH TO WORK DO NOT CHANGE UNTIL CONFIRMING THAT ABOVE CODE WORKS
+Divide and Conquer (Implement)
+Store Output of a prompt on the console, "Please choose Rock, Paper, or Scissors", into a LET
+Create a computer response, it has to be random 
+Create a function to compare the computer response and the user response which will output who won
+Same response equals "draw"
+Computer Response/User Response
+Rock/Paper || Paper/Scissors || Scissors/Rock == 'You win'
+Rock/Scissors || Paper/Rock || Scissors/Paper == 'You lose'
 */
-        let playerSelection = () => {
-            let rockPaperScissors = prompt(`Rock, Paper, Scissors? `)
-
-            if (rockPaperScissors == 'Rock' || rockPaperScissors == 'rock') {
-                return ('rock');
-            } else if (rockPaperScissors == 'Paper' || rockPaperScissors == 'paper') {
-                return ('paper');
-            } else if (rockPaperScissors == 'Scissors' || rockPaperScissors == 'scissors') {
-                return ('scissors');
-            } else {
-                return ('Choose Rock, Paper, or Scissor');
-            }
-        }
-
-        let computerPlay = () => {
-            let rockPaperScissors = Math.floor((Math.random() * 100) + 1);
-
-            if (rockPaperScissors < 33) {
-                return ('rock');
-            } else if (rockPaperScissors >= 33 && rockPaperScissors < 66) {
-                return ('paper');
-            } else {
-                return ('scissors');
-            }
-        }
-        
-
-        let round = () => {
-            let playerChoice = playerSelection();
-            let computerChoice = computerPlay();
-
-            if (playerChoice == computerChoice) {
-                return (`It's a tie`);
-            } else if (playerChoice === 'rock' && computerChoice === 'paper') {
-                alert('Paper beats Rock, you lose');
-            } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
-                alert('Rock beats Scissors, you win');
-            } else if (playerChoice === 'paper' && computerChoice === 'rock') {
-                alert('Paper beats Rock, you win');
-            } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
-                alert('Scissors beats Paper, you lose');
-            } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
-                alert('Rock beats Scissors, you lose');
-            } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
-                alert('Scissors beats Paper, you win');
-            } else {
-                alert ('Illegal character(s), Rock, Paper, Scissors');
-            }
-        }
-
-round();
