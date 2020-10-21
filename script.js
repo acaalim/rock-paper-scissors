@@ -29,3 +29,15 @@ Computer Response/User Response
 Rock/Paper || Paper/Scissors || Scissors/Rock == 'You win'
 Rock/Scissors || Paper/Rock || Scissors/Paper == 'You lose'
 */
+
+let userResponse = () => {
+    let response = prompt(`Choose Rock, Paper, or Scissors: `).toLowerCase();
+    if (response == 'rock') {
+        return ('rock');
+    } else if (response == 'paper') {
+        return ('paper');
+    } else if (response == 'scissors') {
+        return ('scissors');
+    } 
+    return response;
+}
