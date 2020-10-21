@@ -41,3 +41,14 @@ let userResponse = () => {
     } 
     return response;
 }
+
+let computerResponse = () => {
+    let randomResponse = Math.floor(Math.random() * 101);
+    if (randomResponse <= 33) {
+        return ('rock');
+    } else if (randomResponse > 33 && randomResponse <= 66) {
+        return ('paper');
+    } else {
+        return ('scissors');
+    }
+}
