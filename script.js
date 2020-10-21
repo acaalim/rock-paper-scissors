@@ -74,3 +74,5 @@ let compareResponses = () => {
         alert('Illegal Character(s)');
     }
 }
+
+compareResponses();
